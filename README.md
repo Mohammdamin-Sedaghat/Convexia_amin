@@ -44,16 +44,19 @@ This output can poIr scoring models, dashboards, and downstream analysis.
 
 ```
 ├── data/
+│   ├── Clinicaltrials_summary.zip
 │   ├── targets.csv
 │   ├── inspection_details_since2019.csv
 │   ├── Inspection_Citation_Details.csv
 │   ├── Published_483s.csv
 │   ├── warning-letters.csv
-│   ├── clinicalTrials_summary.csv
+│   ├── clinicalTrials_summary.csv (maybe)
+│   ├── clinicalTrials_summary_compressed.csv
 ├── extract_targets.py       # Scraper for initial CRO list
 ├── Convexia-Amin.ipynb       # Main pipeline notebook
 ├── requirements.txt
 ├── overlaps.json
+├── Evaluation_Summary.md
 └── README.md
 ```
 
@@ -68,6 +71,26 @@ This output can poIr scoring models, dashboards, and downstream analysis.
   * rapidfuzz
   * matplotlib - for evaluating findings
   * (There are other ones mentioned but those are for jupyter nootebook)
+
+* The following data files:
+
+  * Fully required:
+
+    * `data/Inspection_Citation_Details.csv`
+    * `data/inspection_details_since2019.csv`
+    * `data/Published_483s.csv`
+    * `data/regulatory_data_merged.csv`
+    * `data/unified_schema.csv`
+    * `data/warning-letters.csv`
+    * `overlaps.json`
+
+  * Has an alternative (the alternative is required if the file does not exist):
+
+    * `data/clinicalTrials_summary.csv` : `data/clinicalTrials_summary_compressed.csv`
+
+  * The code can hadnle missing:
+
+    * `data/targets.csv`
 
 ---
 
