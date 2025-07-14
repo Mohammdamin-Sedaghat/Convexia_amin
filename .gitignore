@@ -1,2 +1,6 @@
 venv/
 __pycache__/
+
+
+# It's added becuase it's too large
+Clinicaltrials_summary.csv
